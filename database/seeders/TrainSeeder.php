@@ -14,17 +14,17 @@ class TrainSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 12; $i++) {
 
             $train = new Train();
             $train->azienda = $faker->word();
             $train->stazione_di_partenza = $faker->words(2, true);
             $train->stazione_di_arrivo = $faker->words(2, true);
-            $train->data = $faker->dateTimeThisMonth('+1 days');
-            $train->orario_di_partenza = $faker->randomFloat(2, 00, 23);
-            $train->orario_di_arrivo = $faker->randomFloat(2, 00, 23);
+            $train->data = $faker->date();
+            $train->orario_di_partenza = $faker->randomFloat(2, 00, 11);
+            $train->orario_di_arrivo = $faker->randomFloat(2, 12, 23);
             $train->codice_treno = $faker->ean13();
-            $train->numero_carrozze = $faker->randomDigit();
+            $train->numero_carrozze = $faker->numberBetween(4, 9);
             $train->in_orario = $faker->boolean();
             $train->cancellato = $faker->boolean();
 
