@@ -8,7 +8,7 @@
 
          @foreach ($trains as $train)
          <div class="col-4 py-4">
-          <div class="card">
+          <div class="card card-bkg">
             <ul class="py-3">
                 <li class="list-group-item text-center"><strong>Azienda: </strong>{{$train->azienda}}</li>
                 <li class="list-group-item text-center"><strong>Stazione di partenza: </strong>{{$train->stazione_di_partenza}}</li>
