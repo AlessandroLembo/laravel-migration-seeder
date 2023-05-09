@@ -1,0 +1,13 @@
+body{
+    background-color: azure;
+}
+
+.card-bkg{
+    background-color: darkgray;
+    border: 2px solid black;
+}
+
+.card-bkg:hover{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
